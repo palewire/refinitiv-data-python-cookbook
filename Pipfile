@@ -20,6 +20,13 @@ pytest-env = "*"
 pytest-cov = "*"
 
 [packages]
+sphinx = "*"
+sphinx-autobuild = "*"
+myst-parser = "*"
+jupyterlab = "*"
+pandas = "*"
+myst-nb = "*"
+sphinx-multitoc-numbering = "*"
 
 [requires]
 python_version = "3.10"
