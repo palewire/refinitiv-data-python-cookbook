@@ -7,18 +7,11 @@ Practical examples for users of [Refintiv Data Library for Python](https://pypi.
 
 ## What this is
 
-This collection will teach you how to use the [`refinitiv-data`](https://pypi.org/project/refinitiv-data/) Python library to:
-
-* Create an application key and connect to the Refinitiv Data Library
-* Retrieve market data tracking stocks, bonds and commodities
-* Retrieve data about companies, including their financial performance
-* Retrieve macroeconomic data about countries around the world
-* Retrieve data in different time intervals
-* Customize your data retrieval with filter expressions
+This collection will show you how to use the [`refinitiv-data`](https://pypi.org/project/refinitiv-data/) Python library to create an application key and retrieve data on markets, companies and macroeconomics.
 
 ## Who can use it
 
-This cookbook is free. All it requires is a Refinitiv Eikon account with access to the company's private data services.
+This cookbook is free. All it requires is a [Refinitiv Eikon](https://eikon.refinitiv.com/) account with access to the company's [private data services](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api).
 
 ## Table of contents
 
