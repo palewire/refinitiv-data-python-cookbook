@@ -7,7 +7,7 @@ Practical examples for users of [Refintiv Data Library for Python](https://pypi.
 
 ## What this is
 
-This collection will show you how to use the [`refinitiv-data`](https://pypi.org/project/refinitiv-data/) Python library to create an application key and retrieve data on markets, companies and macroeconomics.
+This collection of Python snippets will show you how to use the [`refinitiv-data`](https://pypi.org/project/refinitiv-data/) library to retrieve data on markets, companies and macroeconomics.
 
 ## Who can use it
 
