@@ -1,5 +1,5 @@
 serve:
-	cd ./docs && pipenv run make livhtml
+	pipenv run sphinx-autobuild -b html docs/src docs/_build_html
 
 build:
 	pip install -r docs/requirements.txt
