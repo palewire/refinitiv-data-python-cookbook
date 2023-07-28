@@ -5,14 +5,16 @@
 
 Practical examples for users of [Refintiv Data Library for Python](https://pypi.org/project/refinitiv-data/)
 
-## What you will learn
+## What this is
 
-This collection will teach you:
+This collection will teach you how to use the [`refinitiv-data`](https://pypi.org/project/refinitiv-data/) Python library to:
 
-* How to create an application key and connect to Refinitiv Data Library via Python
-* How to retrieve market data tracking stocks, bonds and commodities
-* How to retrieve data about companies, including their financial performance
-* How to retrieve macroeconomic data about countries around the world
+* Create an application key and connect to the Refinitiv Data Library
+* Retrieve market data tracking stocks, bonds and commodities
+* Retrieve data about companies, including their financial performance
+* Retrieve macroeconomic data about countries around the world
+* Retrieve data in different time intervals
+* Customize your data retrieval with filter expressions
 
 ## Who can use it
 
