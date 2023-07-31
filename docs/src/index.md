@@ -44,3 +44,11 @@ Like the Refinitiv Python client, this cookbook is free. All it requires is a [R
 ./markets-index-prices.md
 ./markets-commodity-prices.md
 ```
+
+```{toctree}
+:maxdepth: 1
+:caption: Companies
+:name: companies
+
+./companies-instrument-list.md
+```
