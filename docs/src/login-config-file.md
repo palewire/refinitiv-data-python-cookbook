@@ -15,7 +15,7 @@ kernelspec:
 
 # Authenticating with a configuration file
 
-By default, the Refinitiv Data Library for Python expects you to provide credentials in a configuration file named `refinitiv-data.config.json`.
+By default, the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/) expects you to provide credentials in a configuration file named `refinitiv-data.config.json`.
 
 At minimum, it must include your application key, as well as the username and password you use to access the Refinitiv web portal.
 
@@ -52,4 +52,22 @@ Verify the session is open by executing a query for the current price of Thomson
 
 ```{code-cell}
 rd.get_history('TRI.N')
+```
+
+The library expects you to close your session when you're finished. You can do so by running the following code:
+
+```{code-cell}
+rd.close_session()
+```
+
+## Specifying a configuration file
+
+If you want to store your configuration file in a different location, you can specify its path when you open a session.
+
+For example, if you gave your configuration file with a shorter name and stored it in a subdirectory named `config`, you could open a session by running something like the following:
+
+```python
+rd.open_session(
+  config_name='./config/refinitiv.json'
+)
 ```

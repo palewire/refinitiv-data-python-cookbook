@@ -22,5 +22,6 @@ This cookbook is free. All it requires is a [Refinitiv Eikon](https://eikon.refi
 ./appkey.md
 ./install.md
 ./import.md
-./configfile.md
+./login-config-file.md
+./login-inline.md
 ```
