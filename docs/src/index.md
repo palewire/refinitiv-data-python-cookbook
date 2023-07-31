@@ -18,7 +18,7 @@ This cookbook is free. All it requires is a [Refinitiv Eikon](https://eikon.refi
 ```{toctree}
 :maxdepth: 1
 :name: mastertoc
-:numbered:
 
 ./appkey.md
+./configfile.md
 ```

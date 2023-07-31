@@ -2,7 +2,6 @@ from datetime import datetime
 
 extensions = [
     "myst_nb",
-    "sphinx_multitoc_numbering",
 ]
 
 templates_path = ["_templates"]
@@ -27,7 +26,6 @@ html_sidebars = {
 }
 html_theme_options = {
     "canonical_url": f"https://palewi.re/docs/{project}/",
-    "donate_url": "https://github.com/sponsors/palewire",
     "show_powered_by": False,
     "show_relbar_bottom": True,
 }
