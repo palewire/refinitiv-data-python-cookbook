@@ -19,6 +19,10 @@ jobs:
 
     - name: Build site
       run: make build
+      env:
+        RDP_APP_KEY: ${{ secrets.RDP_APP_KEY }}
+        RDP_USERNAME: ${{ secrets.RDP_USERNAME }}
+        RDP_PASSWORD: ${{ secrets.RDP_PASSWORD }}
 
     - name: Upload release candidate
       uses: actions/upload-artifact@v3
