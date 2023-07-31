@@ -54,3 +54,13 @@ Like the Refinitiv Python client, this cookbook is free. All it requires is a [R
 ./companies-instrument-list.md
 ./companies-quarterly-results.md
 ```
+
+```{toctree}
+:maxdepth: 1
+:caption: Macroeconomics
+:name: macroeconomics
+
+./economics-monthly-values.md
+./economics-weekly-values.md
+./economics-time-range.md
+```

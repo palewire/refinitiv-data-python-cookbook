@@ -22,19 +22,19 @@ import refinitiv.data as rd
 rd.open_session()
 ```
 
-You can use the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/) to retrieve the stock prices for custom time ranges by passing a `start` and `end` date to the `get_history` function.
+You can use the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/) to retrieve economic indicators for custom time ranges by passing a `start` and `end` date to the `get_history` function.
 
 The inputs should be `datetime.timedelta` objects. The `start` argument is how many days before today to start the range, and the `end` argument is how many days before today to end the range.
 
-This example retrieves the closing price for the Thomson Reuters stock for the last 365 calendar days:
+This example retrieves the US unemployment rate for the last 20 years:
 
 ```{code-cell}
 from datetime import timedelta
 
 rd.get_history(
-    "TRI.TO",
+    "USUNR=ECI",
     # Note that this number is negative because it's in the past
-    start=timedelta(days=-365),
+    start=timedelta(days=-365 * 20),
     # `end` is set to zero to draw the latest numbers
     end=timedelta(days=0),
 )
