@@ -20,5 +20,7 @@ This cookbook is free. All it requires is a [Refinitiv Eikon](https://eikon.refi
 :name: mastertoc
 
 ./appkey.md
+./install.md
+./import.md
 ./configfile.md
 ```

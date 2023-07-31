@@ -1,4 +1,55 @@
+---
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: '0.8'
+    jupytext_version: '1.4.1'
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
 ```{include} _templates/nav.html
 ```
 
 # Authenticating with a configuration file
+
+By default, the Refinitiv Data Library for Python expects you to provide credentials in a configuration file named `refinitiv-data.config.json`.
+
+At minimum, it must include your application key, as well as the username and password you use to access into the Refinitiv web access portal.
+
+Start by copying and pasting the following into a file named `refinitiv-data.config.json`, replacing the placeholder values with your own.
+
+```javascript
+{
+  "sessions": {
+    "default": "platform.rdp",
+    "platform": {
+      "rdp": {
+        "app-key": "YOUR APP KEY GOES HERE!",
+        "username": "YOUR RDP LOGIN OR MACHINE GOES HERE!",
+        "password": "YOUR RDP PASSWORD GOES HERE!"
+      }
+    }
+  }
+}
+```
+
+```{note}
+A fuller example of all the configuration options available can be found in the Refinitiv's [official documentation](https://github.com/Refinitiv-API-Samples/Example.DataLibrary.Python/blob/main/Configuration/refinitiv-data.config.json).
+```
+
+Unless you provide further instruction your Python script will expect the configuration file to be located in the same directory as the script you are running. Once the file is in place, you can import the library open a session by running the following code:
+
+```{code-cell}
+import refinitiv.data as rd
+
+rd.open_session()
+```
+
+Verify the session is open by executing a simple query for the current price of Thomson Reuters stock. You should back a table of data.
+
+```{code-cell}
+rd.get_history('TRI.N')
+```

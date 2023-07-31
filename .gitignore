@@ -1,3 +1,7 @@
+# Repo specific stuff
+refinitiv-data.config.json
+jupyter_execute
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
