@@ -41,4 +41,5 @@ Like the Refinitiv Python client, this cookbook is free. All it requires is a [R
 :name: markets
 
 ./markets-stock-prices.md
+./markets-index-prices.md
 ```
