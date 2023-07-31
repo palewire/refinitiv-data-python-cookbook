@@ -1,5 +1,5 @@
-import os
 import json
+import os
 from pathlib import Path
 
 THIS_DIR = Path(__file__).parent.resolve()
@@ -12,11 +12,11 @@ def main():
         tmpl = json.load(fp)
 
     # Drop in the private variables from the environment
-    tmpl['sessions']['platform']['rdp'].update(
+    tmpl["sessions"]["platform"]["rdp"].update(
         {
-            "app-key": os.environ['RDP_APP_KEY'],
-            "username": os.environ['RDP_USERNAME'],
-            "password": os.environ['RDP_PASSWORD'],
+            "app-key": os.environ["RDP_APP_KEY"],
+            "username": os.environ["RDP_USERNAME"],
+            "password": os.environ["RDP_PASSWORD"],
         }
     )
 

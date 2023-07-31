@@ -26,7 +26,7 @@ import refinitiv.data as rd
 session = rd.session.platform.Definition(
     app_key=os.getenv('RDP_APP_KEY'),
     grant=rd.session.platform.GrantPassword(
-        username=os.getenv('RDP_USERNAME'), 
+        username=os.getenv('RDP_USERNAME'),
         password=os.getenv('RDP_PASSWORD')
     )
 ).get_session()

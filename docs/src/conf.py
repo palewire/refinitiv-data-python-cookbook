@@ -8,20 +8,20 @@ templates_path = ["_templates"]
 source_suffix = ".rst"
 master_doc = "index"
 
-project = 'Refinitiv Data Python Cookbook'
+project = "Refinitiv Data Python Cookbook"
 year = datetime.now().year
-copyright = f'{year} palewi.re'
+copyright = f"{year} palewi.re"
 
 exclude_patterns = ["_build"]
 
 html_theme = "alabaster"
 html_sidebars = {
-    '**': [
-        'about.html',
-        'navigation.html',
-        'relations.html',
-        'searchbox.html',
-        'donate.html',
+    "**": [
+        "about.html",
+        "navigation.html",
+        "relations.html",
+        "searchbox.html",
+        "donate.html",
     ]
 }
 html_theme_options = {
@@ -30,9 +30,9 @@ html_theme_options = {
     "show_relbar_bottom": True,
 }
 
-html_static_path = ['_static']
+html_static_path = ["_static"]
 html_css_files = [
-    'css/custom.css',
+    "css/custom.css",
 ]
 
-pygments_style = 'sphinx'
+pygments_style = "sphinx"

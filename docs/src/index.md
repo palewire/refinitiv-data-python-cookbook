@@ -11,7 +11,7 @@ This collection of Python snippets will show you how to use the [`refinitiv-data
 
 ## Who can use it
 
-This cookbook is free. All it requires is a [Refinitiv Eikon](https://eikon.refinitiv.com/) account with access to the company's [private data services](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api).
+Like the Refinitiv Python client, this cookbook is free. All it requires is a [Refinitiv Eikon](https://eikon.refinitiv.com/) account with access to the company's [private data services](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api).
 
 ## Table of contents
 

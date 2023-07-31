@@ -67,7 +67,5 @@ If you want to store your configuration file in a different location, you can sp
 For example, if you gave your configuration file with a shorter name and stored it in a subdirectory named `config`, you could open a session by running something like the following:
 
 ```python
-rd.open_session(
-  config_name='./config/refinitiv.json'
-)
+rd.open_session(config_name="./config/refinitiv.json")
 ```
