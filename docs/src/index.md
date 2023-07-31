@@ -3,7 +3,7 @@
 
 # Refinitiv Data Python Cookbook
 
-Practical examples for users of [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/)
+Practical examples for users of the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/)
 
 ## What this is
 
