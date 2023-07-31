@@ -17,9 +17,9 @@ kernelspec:
 
 By default, the Refinitiv Data Library for Python expects you to provide credentials in a configuration file named `refinitiv-data.config.json`.
 
-At minimum, it must include your application key, as well as the username and password you use to access into the Refinitiv web access portal.
+At minimum, it must include your application key, as well as the username and password you use to access the Refinitiv web portal.
 
-Start by copying and pasting the following into a file named `refinitiv-data.config.json`, replacing the placeholder values with your own.
+Start by copying and pasting the following snippet into a file named `refinitiv-data.config.json`. Replace the placeholder values with your credentials.
 
 ```javascript
 {
@@ -37,10 +37,10 @@ Start by copying and pasting the following into a file named `refinitiv-data.con
 ```
 
 ```{note}
-A fuller example of all the configuration options available can be found in the Refinitiv's [official documentation](https://github.com/Refinitiv-API-Samples/Example.DataLibrary.Python/blob/main/Configuration/refinitiv-data.config.json).
+A fuller example of all the configuration options available can be found in Refinitiv's [official documentation](https://github.com/Refinitiv-API-Samples/Example.DataLibrary.Python/blob/main/Configuration/refinitiv-data.config.json).
 ```
 
-Unless you provide further instruction your Python script will expect the configuration file to be located in the same directory as the script you are running. Once the file is in place, you can import the library open a session by running the following code:
+Unless you provide further instruction your Python script will expect the configuration file to be located in the same directory as the script you are running. Once the file is in place, you can import the library and open a session by running the following code:
 
 ```{code-cell}
 import refinitiv.data as rd
@@ -48,7 +48,7 @@ import refinitiv.data as rd
 rd.open_session()
 ```
 
-Verify the session is open by executing a simple query for the current price of Thomson Reuters stock. You should back a table of data.
+Verify the session is open by executing a query for the current price of Thomson Reuters stock. You should back a table of data.
 
 ```{code-cell}
 rd.get_history('TRI.N')
