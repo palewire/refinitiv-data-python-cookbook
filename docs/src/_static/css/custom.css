@@ -43,6 +43,7 @@ div.sphinxsidebar h3 {
 div.sphinxsidebarwrapper h1.logo {
   font-size: 1.85em;
   font-weight: 800;
+  line-height: 1.25;
 }
 
 @media (min-width: 875px) {
