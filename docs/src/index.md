@@ -24,4 +24,5 @@ Like the Refinitiv Python client, this cookbook is free. All it requires is a [R
 ./import.md
 ./login-config-file.md
 ./login-inline.md
+./login-contextmanager.md
 ```
