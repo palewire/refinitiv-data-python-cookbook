@@ -17,11 +17,19 @@ Like the Refinitiv Python client, this cookbook is free. All it requires is a [R
 
 ```{toctree}
 :maxdepth: 1
-:name: mastertoc
+:caption: Getting Started
+:name: getting-started
 
 ./appkey.md
 ./install.md
 ./import.md
+```
+
+```{toctree}
+:maxdepth: 1
+:caption: Logging in
+:name: logging-in
+
 ./login-config-file.md
 ./login-inline.md
 ./login-contextmanager.md
