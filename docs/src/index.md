@@ -34,3 +34,11 @@ Like the Refinitiv Python client, this cookbook is free. All it requires is a [R
 ./login-inline.md
 ./login-contextmanager.md
 ```
+
+```{toctree}
+:maxdepth: 1
+:caption: Markets
+:name: markets
+
+./markets-stock-prices.md
+```

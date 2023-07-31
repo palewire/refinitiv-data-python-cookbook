@@ -127,6 +127,7 @@ pre {
 
 .toctree-wrapper p.caption {
   font-weight: 700;
+  margin-bottom: 0;
 }
 
 .toggle-details {
