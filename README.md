@@ -1,4 +1,4 @@
-Practical examples for users of the Refinitiv Data Library for Python
+Practical examples for users of the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/)
 
 ### Quick links
 
