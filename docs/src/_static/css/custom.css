@@ -60,6 +60,11 @@ div.sphinxsidebarwrapper h1.logo {
   }
 }
 
+div.sphinxsidebarwrapper li {
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
 div.admonition {
     padding: 15px;
 }

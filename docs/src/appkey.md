@@ -1,7 +1,7 @@
 ```{include} _templates/nav.html
 ```
 
-# Creating an app key
+# Creating an application key
 
 Before you can connect with the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/), you need to create an application key,  a unique identifier that allows you to connect to the platform and retrieve data.
 
