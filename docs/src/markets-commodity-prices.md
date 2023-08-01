@@ -30,7 +30,14 @@ Adding an equals sign as a suffix will return the value in US dollars. Here's th
 rd.get_data("XAU=")
 ```
 
-```{note}
+The `get_data` query requires that you account have access to real-time trading data, which is not available to all users. If you don't, you can request the latest `"1min"` intervals from the `get_history` method.
+
+```{code-cell}
+rd.get_history(
+    "XAU=",
+    interval="1min",
+).tail(1)
+```
 This query requires that you account have access to real-time trading data, which is not available to all users.
 ```
 

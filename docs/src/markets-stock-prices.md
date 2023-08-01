@@ -28,8 +28,13 @@ You can use the [Refinitiv Data Library for Python](https://pypi.org/project/ref
 rd.get_data("TRI.TO")
 ```
 
-```{note}
-This query requires that you account have access to real-time trading data, which is not available to all users.
+The `get_data` query requires that you account have access to real-time trading data, which is not available to all users. If you don't, you can request the latest `"1min"` intervals from the `get_history` method.
+
+```{code-cell}
+rd.get_history(
+    "TRI.TO",
+    interval="1min",
+).tail(1)
 ```
 
 ## Historical data
