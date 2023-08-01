@@ -30,7 +30,7 @@ To do so, pass the company's [Refinitiv Instrument Code](https://en.wikipedia.or
 
 Here’s how to retrieve earnings per share for the last eight fiscal quarters for Thomson Reuters.
 
-First define the metric you want to retrieve, followed by the time interval and number of periods
+First define the metric you want to retrieve, followed by the time interval and number of periods in parenthesis.
 
 ```{code-cell}
 expression = "TR.EPSFRActValue(SDate=0,EDate=-8,Period=FQ0,Frq=FQ)"
