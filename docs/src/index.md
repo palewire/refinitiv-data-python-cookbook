@@ -52,6 +52,7 @@ Like the Refinitiv Python client, this cookbook is free. All it requires is a [R
 :name: companies
 
 ./companies-instrument-list.md
+./companies-peer-list.md
 ./companies-quarterly-results.md
 ```
 
