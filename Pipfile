@@ -28,6 +28,7 @@ pandas = "*"
 myst-nb = "*"
 sphinx-multitoc-numbering = "*"
 refinitiv-data = "*"
+sphinx-palewire-theme = "*"
 
 [requires]
 python_version = "3.10"

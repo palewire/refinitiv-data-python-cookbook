@@ -38,8 +38,6 @@ rd.get_history(
     interval="1min",
 ).tail(1)
 ```
-This query requires that you account have access to real-time trading data, which is not available to all users.
-```
 
 ## Historical data
 

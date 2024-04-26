@@ -1,6 +1,0 @@
-altair
-sphinx
-sphinx-autobuild
-sphinx_multitoc_numbering
-myst-nb
-refinitiv-data

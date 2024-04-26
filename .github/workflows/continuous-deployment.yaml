@@ -41,10 +41,21 @@ jobs:
         name: release-candidate
         path: ./docs/
 
-    - uses: shallwefootball/s3-upload-action@master
+    - id: configure-aws
+      name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
       with:
-        aws_key_id: ${{ secrets.PALEWIRE_DOCS_AWS_ACCESS_KEY_ID }}
-        aws_secret_access_key: ${{ secrets.PALEWIRE_DOCS_AWS_SECRET_ACCESS_KEY }}
-        aws_bucket: ${{ secrets.PALEWIRE_DOCS_AWS_BUCKET }}
-        source_dir: docs/_build/
-        destination_dir: refinitiv-data-python-cookbook
+        aws-access-key-id: ${{ secrets.PALEWIRE_DOCS_AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.PALEWIRE_DOCS_AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+    - id: upload-to-s3
+      name: Upload documentation to Amazon S3
+      uses: datadesk/delivery-deploy-action@v1
+      with:
+        bucket: ${{ secrets.PALEWIRE_DOCS_AWS_BUCKET }}
+        base-path: refinitiv-data-python-cookbook/
+        dir: ./docs/
+        should-cache: false
+        use-accelerate-endpoint: false
+        public: true
