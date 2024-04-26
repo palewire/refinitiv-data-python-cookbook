@@ -70,7 +70,7 @@ jobs:
       with:
         bucket: ${{ secrets.PALEWIRE_DOCS_AWS_BUCKET }}
         base-path: refinitiv-data-python-cookbook/
-        dir: ./docs/
+        dir: ./docs/_build/
         should-cache: false
         use-accelerate-endpoint: false
         public: true
