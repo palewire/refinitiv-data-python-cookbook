@@ -10,8 +10,6 @@ kernelspec:
   language: python
   name: python3
 ---
-```{include} _templates/nav.html
-```
 
 # Handing sessions with a context manager
 

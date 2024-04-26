@@ -1,6 +1,3 @@
-```{include} _templates/nav.html
-```
-
 # Refinitiv Data Python Cookbook
 
 Practical examples for users of the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/)

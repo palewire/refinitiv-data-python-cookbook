@@ -1,6 +1,3 @@
-```{include} _templates/nav.html
-```
-
 # Importing the library
 
 The [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/) is distributed as a Python package named `refinitiv-data`. To use it, you must first import it into your script.
