@@ -40,7 +40,7 @@ jobs:
         RDP_PASSWORD: ${{ secrets.RDP_PASSWORD }}
 
     - name: Upload release candidate
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: release-candidate
         path: ./docs/
