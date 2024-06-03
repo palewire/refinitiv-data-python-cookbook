@@ -780,12 +780,12 @@
         },
         "myst-parser": {
             "hashes": [
-                "sha256:0b4ae0b33a45800a748260cb40348c37089a8a456c35120609240bd1b32f9255",
-                "sha256:8ee926557b8e4c2940a1e62c5720e1667cfaf8480b94b1b9c77dc38e31d104aa"
+                "sha256:6457aaa33a5d474aca678b8ead9b3dc298e89c68e67012e73146ea6fd54babf1",
+                "sha256:88f0cb406cb363b077d176b51c476f62d60604d68a8dcdf4832e080441301a87"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.8'",
-            "version": "==3.0.0"
+            "version": "==3.0.1"
         },
         "nbclient": {
             "hashes": [
