@@ -63,4 +63,5 @@ Like the LSEG Python client, this cookbook is free. All it requires is a [LSEG W
 ./economics-monthly-values.md
 ./economics-weekly-values.md
 ./economics-time-range.md
+./economics-next-release.md
 ```

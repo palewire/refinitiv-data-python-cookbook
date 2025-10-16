@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-    - main
+      - main
   workflow_dispatch:
 
 jobs:
@@ -11,66 +11,66 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
 
-    - id: install-pipenv
-      name: Install pipenv
-      run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
-      shell: bash
+      - id: install-pipenv
+        name: Install pipenv
+        run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
+        shell: bash
 
-    - id: install-python-dependencies
-      name: Install Python dependencies
-      run: pipenv sync --dev
-      shell: bash
+      - id: install-python-dependencies
+        name: Install Python dependencies
+        run: pipenv sync --dev
+        shell: bash
 
-    - id: build-sphinx-documentation
-      name: Build Sphinx documentation
-      run: |
-        pipenv run python createconf.py;
-        pipenv run sphinx-build -b html src _build;
-      shell: bash
-      working-directory: docs
-      env:
-        LSEG_APP_KEY: ${{ secrets.LSEG_APP_KEY }}
-        LSEG_USERNAME: ${{ secrets.LSEG_USERNAME }}
-        LSEG_PASSWORD: ${{ secrets.LSEG_PASSWORD }}
+      - id: build-sphinx-documentation
+        name: Build Sphinx documentation
+        run: |
+          pipenv run python createconf.py;
+          pipenv run sphinx-build -b html src _build;
+        shell: bash
+        working-directory: docs
+        env:
+          LSEG_APP_KEY: ${{ secrets.LSEG_APP_KEY }}
+          LSEG_USERNAME: ${{ secrets.LSEG_USERNAME }}
+          LSEG_PASSWORD: ${{ secrets.LSEG_PASSWORD }}
 
-    - name: Upload release candidate
-      uses: actions/upload-artifact@v4
-      with:
-        name: release-candidate
-        path: ./docs/
+      - name: Upload release candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-candidate
+          path: ./docs/
 
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
     needs: build
     steps:
-    - name: Download release candidate
-      uses: actions/download-artifact@v4
-      with:
-        name: release-candidate
-        path: ./docs/
+      - name: Download release candidate
+        uses: actions/download-artifact@v4
+        with:
+          name: release-candidate
+          path: ./docs/
 
-    - id: configure-aws
-      name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v4
-      with:
-        aws-access-key-id: ${{ secrets.PALEWIRE_DOCS_AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.PALEWIRE_DOCS_AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
+      - id: configure-aws
+        name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.PALEWIRE_DOCS_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.PALEWIRE_DOCS_AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
 
-    - id: upload-to-s3
-      name: Upload documentation to Amazon S3
-      uses: datadesk/delivery-deploy-action@v1
-      with:
-        bucket: ${{ secrets.PALEWIRE_DOCS_AWS_BUCKET }}
-        base-path: refinitiv-data-python-cookbook/
-        dir: ./docs/_build/
-        should-cache: false
-        use-accelerate-endpoint: false
-        public: true
+      - id: upload-to-s3
+        name: Upload documentation to Amazon S3
+        uses: datadesk/delivery-deploy-action@v1
+        with:
+          bucket: ${{ secrets.PALEWIRE_DOCS_AWS_BUCKET }}
+          base-path: refinitiv-data-python-cookbook/
+          dir: ./docs/_build/
+          should-cache: false
+          use-accelerate-endpoint: false
+          public: true
