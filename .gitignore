@@ -1,6 +1,8 @@
 # Repo specific stuff
 refinitiv-data.config.json
+lseg-data.config.json
 jupyter_execute
+_notebook.ipynb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

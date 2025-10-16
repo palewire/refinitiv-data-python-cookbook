@@ -15,19 +15,22 @@ kernelspec:
 
 ```{code-cell}
 :tags: [hide-cell]
-import refinitiv.data as rd
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
-rd.open_session()
+import lseg.data as ld
+
+ld.open_session()
 ```
 
-You can use the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/) to retrieve the [North American Industry Classification System](https://www.census.gov/naics/) (NAICS) codes associated with a company. It is a standard used by US statistical agencies to classify business establishments for economic analysis.
+You can use the [LSEG Data Library for Python](https://pypi.org/project/lseg-data/) to retrieve the [North American Industry Classification System](https://www.census.gov/naics/) (NAICS) codes associated with a company. It is a standard used by US statistical agencies to classify business establishments for economic analysis.
 
 To do acquire the data, pass a company’s [Refinitiv Instrument Code](https://en.wikipedia.org/wiki/Refinitiv_Identification_Code) to the `get_data` method with a request for NAICS related fields.
 
 Here's a query for Thomson Reuters:
 
 ```{code-cell}
-rd.get_data(
+ld.get_data(
     'TRI.N',
     fields=[
         # Basic stuff
@@ -50,5 +53,5 @@ rd.get_data(
 
 ```{code-cell}
 :tags: [hide-cell]
-rd.close_session()
+ld.close_session()
 ```

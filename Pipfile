@@ -27,8 +27,8 @@ jupyterlab = "*"
 pandas = "*"
 myst-nb = "*"
 sphinx-multitoc-numbering = "*"
-refinitiv-data = "*"
+lseg-data = "*"
 sphinx-palewire-theme = "*"
 
 [requires]
-python_version = "3.10"
+python_version = "3.13"

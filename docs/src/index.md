@@ -1,14 +1,14 @@
-# Refinitiv Data Python Cookbook
+# LSEG Data Python Cookbook
 
-Practical examples for users of the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/)
+Practical examples for users of the [LSEG Data Library for Python](https://pypi.org/project/lseg-data/)
 
 ## What this is
 
-This collection of Python snippets will show you how to use the [`refinitiv-data`](https://pypi.org/project/refinitiv-data/) library to retrieve data on markets, companies and macroeconomics.
+This collection of Python snippets will show you how to use the [`lseg-data`](https://pypi.org/project/lseg-data/) library to retrieve data on markets, companies and macroeconomics.
 
 ## Who can use it
 
-Like the Refinitiv Python client, this cookbook is free. All it requires is a [Refinitiv Eikon](https://eikon.refinitiv.com/) account with access to the company's [private data services](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api).
+Like the LSEG Python client, this cookbook is free. All it requires is a [LSEG Workspace](https://www.lseg.com/en/data-analytics/products/workspace) account with access to the company's [private data services](https://developers.lseg.com).
 
 ## Table of contents
 

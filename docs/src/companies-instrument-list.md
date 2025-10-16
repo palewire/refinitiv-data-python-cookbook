@@ -15,12 +15,15 @@ kernelspec:
 
 ```{code-cell}
 :tags: [hide-cell]
-import refinitiv.data as rd
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
-rd.open_session()
+import lseg.data as ld
+
+ld.open_session()
 ```
 
-You can use the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/) to retrieve metadata about all of the companies in a stock index.
+You can use the [LSEG Data Library for Python](https://pypi.org/project/lseg-data/) to retrieve metadata about all of the companies in a stock index.
 
 To do so, pass the index's [Refinitiv Instrument Code](https://en.wikipedia.org/wiki/Refinitiv_Identification_Code) with a `0#` prefix to the `fundamental_and_reference` component of package's `content` submodule.
 
@@ -28,7 +31,7 @@ The method requires that you specify at least one field to retrieve for each com
 
 
 ```{code-cell}
-rd.content.fundamental_and_reference.Definition(
+ld.content.fundamental_and_reference.Definition(
     universe=["0#.DJI"],
     fields=[
         "TR.CommonName",
@@ -38,10 +41,10 @@ rd.content.fundamental_and_reference.Definition(
 ```
 
 ```{note}
-In Refinitiv terminology, the `0#` prefix is known as a “chain.” It is used to identify a group of instruments that share a common characteristic, such as being part of an index.
+In LSEG terminology, the `0#` prefix is known as a “chain.” It is used to identify a group of instruments that share a common characteristic, such as being part of an index.
 ```
 
 ```{code-cell}
 :tags: [hide-cell]
-rd.close_session()
+ld.close_session()
 ```

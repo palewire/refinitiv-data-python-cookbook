@@ -15,17 +15,20 @@ kernelspec:
 
 ```{code-cell}
 :tags: [hide-cell]
-import refinitiv.data as rd
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
-rd.open_session()
+import lseg.data as ld
+
+ld.open_session()
 ```
 
-You can use the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/) to retrieve monthly economic indicators like inflation and unemployment by passing the relevent [Refinitiv Instrument Code](https://en.wikipedia.org/wiki/Refinitiv_Identification_Code) to the `get_history` function with the `interval` parameter set to `"monthly"`.
+You can use the [LSEG Data Library for Python](https://pypi.org/project/lseg-data/) to retrieve monthly economic indicators like inflation and unemployment by passing the relevent [Refinitiv Instrument Code](https://en.wikipedia.org/wiki/Refinitiv_Identification_Code) to the `get_history` function with the `interval` parameter set to `"monthly"`.
 
 Here's how to retrieve the Consumer Price Index, a monthly inflation indicator released by the US Bureau of Labor Statistics:
 
 ```{code-cell}
-rd.get_history(
+ld.get_history(
     "USCPI=ECI",
     interval="monthly",
 )
@@ -33,5 +36,5 @@ rd.get_history(
 
 ```{code-cell}
 :tags: [hide-cell]
-rd.close_session()
+ld.close_session()
 ```

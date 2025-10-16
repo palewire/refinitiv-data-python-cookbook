@@ -15,12 +15,15 @@ kernelspec:
 
 ```{code-cell}
 :tags: [hide-cell]
-import refinitiv.data as rd
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
-rd.open_session()
+import lseg.data as ld
+
+ld.open_session()
 ```
 
-You can use the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/) to retrieve quarterly results that company's post each earnings season.
+You can use the [LSEG Data Library for Python](https://pypi.org/project/lseg-data/) to retrieve quarterly results that company's post each earnings season.
 
 To do so, pass the company's [Refinitiv Instrument Code](https://en.wikipedia.org/wiki/Refinitiv_Identification_Code) to the `get_data` submodule. In addition to the code, you must provide custom parameters that specify the metric, time interval and number of periods to retrieve.
 
@@ -37,7 +40,7 @@ expression = "TR.EPSFRActValue(SDate=0,EDate=-8,Period=FQ0,Frq=FQ)"
 Then query the data for the company, asking for the metric as well as the date it was released and the last fiscal quarter's end date.
 
 ```{code-cell}
-rd.get_data(
+ld.get_data(
     "TRI.TO",
     fields=[
         f"{expression}.Date",
@@ -54,7 +57,7 @@ The same logic can be used to query revenue, which is provided by the "TR.Revenu
 ```{code-cell}
 expression = "TR.RevenueActValue(SDate=0,EDate=-8,Period=FQ0,Frq=FQ)"
 
-rd.get_data(
+ld.get_data(
     "TRI.TO",
     fields=[
         f"{expression}.Date",
@@ -67,5 +70,5 @@ rd.get_data(
 
 ```{code-cell}
 :tags: [hide-cell]
-rd.close_session()
+ld.close_session()
 ```

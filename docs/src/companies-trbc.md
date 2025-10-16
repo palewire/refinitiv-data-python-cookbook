@@ -15,19 +15,22 @@ kernelspec:
 
 ```{code-cell}
 :tags: [hide-cell]
-import refinitiv.data as rd
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
-rd.open_session()
+import lseg.data as ld
+
+ld.open_session()
 ```
 
-You can use the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/) to retrieve the [The Refinitiv Business Classification](https://en.wikipedia.org/wiki/The_Refinitiv_Business_Classification) (TRBC) codes associated with a company. The standard is used by Refinitiv to classify business establishments for economic analysis.
+You can use the [LSEG Data Library for Python](https://pypi.org/project/lseg-data/) to retrieve the [The Refinitiv Business Classification](https://en.wikipedia.org/wiki/The_Refinitiv_Business_Classification) (TRBC) codes associated with a company. The standard is used by LSEG to classify business establishments for economic analysis.
 
 To do acquire the data, pass a company’s [Refinitiv Instrument Code](https://en.wikipedia.org/wiki/Refinitiv_Identification_Code) to the `get_data` method with a request for TRBC related fields.
 
 Here's a query for Thomson Reuters:
 
 ```{code-cell}
-rd.get_data(
+ld.get_data(
     'TRI.N',
     fields=[
         # Basic stuff
@@ -49,5 +52,5 @@ rd.get_data(
 
 ```{code-cell}
 :tags: [hide-cell]
-rd.close_session()
+ld.close_session()
 ```

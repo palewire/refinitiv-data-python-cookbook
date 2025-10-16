@@ -15,12 +15,15 @@ kernelspec:
 
 ```{code-cell}
 :tags: [hide-cell]
-import refinitiv.data as rd
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
-rd.open_session()
+import lseg.data as ld
+
+ld.open_session()
 ```
 
-You can use the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/) to retrieve the stock prices for custom time ranges by passing a `start` and `end` date to the `get_history` function.
+You can use the [LSEG Data Library for Python](https://pypi.org/project/lseg-data/) to retrieve the stock prices for custom time ranges by passing a `start` and `end` date to the `get_history` function.
 
 The inputs should be `datetime.timedelta` objects. The `start` argument is how many days before today to start the range, and the `end` argument is how many days before today to end the range.
 
@@ -29,7 +32,7 @@ This example retrieves the closing price for the Thomson Reuters stock for the l
 ```{code-cell}
 from datetime import timedelta
 
-rd.get_history(
+ld.get_history(
     "TRI.TO",
     # Note that this number is negative because it's in the past
     start=timedelta(days=-365),
@@ -40,5 +43,5 @@ rd.get_history(
 
 ```{code-cell}
 :tags: [hide-cell]
-rd.close_session()
+ld.close_session()
 ```

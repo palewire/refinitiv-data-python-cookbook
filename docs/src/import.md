@@ -1,11 +1,11 @@
 # Importing the library
 
-The [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/) is distributed as a Python package named `refinitiv-data`. To use it, you must first import it into your script.
+The [LSEG Data Library for Python](https://pypi.org/project/lseg-data/) is distributed as a Python package named `lseg-data`. To use it, you must first import it into your script.
 
-The import style recommended by Refinitiv is to import it with the alias of `rd`.  Here's how to do it:
+The import style recommended by LSEG is to import it with the alias of `ld`.  Here's how to do it:
 
 ```python
-import refinitiv.data as rd
+import lseg.data as ld
 ```
 
 ```{note}

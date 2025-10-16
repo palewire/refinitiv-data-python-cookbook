@@ -1,4 +1,4 @@
-Practical examples for users of the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/)
+Practical examples for users of the [LSEG Data Library for Python](https://pypi.org/project/lseg-data/)
 
 ### Quick links
 

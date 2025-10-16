@@ -7,7 +7,7 @@ extensions = [
 source_suffix = ".md"
 master_doc = "index"
 
-project = "Refinitiv Data Python Cookbook"
+project = "LSEG Data Python Cookbook"
 year = datetime.now().year
 copyright = f"{year} palewi.re"
 

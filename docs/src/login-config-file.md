@@ -11,13 +11,19 @@ kernelspec:
   name: python3
 ---
 
+```{code-cell}
+:tags: [hide-cell]
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+```
+
 # Authenticating with a configuration file
 
-By default, the [Refinitiv Data Library for Python](https://pypi.org/project/refinitiv-data/) expects you to provide credentials in a configuration file named `refinitiv-data.config.json`.
+By default, the [LSEG Data Library for Python](https://pypi.org/project/lseg-data/) expects you to provide credentials in a configuration file named `lseg-data.config.json`.
 
-At minimum, it must include your application key, as well as the username and password you use to access the Refinitiv web portal.
+At minimum, it must include your application key, as well as the username and password you use to access the LSEG web portal.
 
-Start by copying and pasting the following snippet into a file named `refinitiv-data.config.json`. Replace the placeholder values with your credentials.
+Start by copying and pasting the following snippet into a file named `lseg-data.config.json`. Replace the placeholder values with your credentials.
 
 ```javascript
 {
@@ -27,7 +33,8 @@ Start by copying and pasting the following snippet into a file named `refinitiv-
       "rdp": {
         "app-key": "YOUR APP KEY GOES HERE!",
         "username": "YOUR RDP LOGIN OR MACHINE GOES HERE!",
-        "password": "YOUR RDP PASSWORD GOES HERE!"
+        "password": "YOUR RDP PASSWORD GOES HERE!",
+        "signon_control": true
       }
     }
   }
@@ -35,27 +42,27 @@ Start by copying and pasting the following snippet into a file named `refinitiv-
 ```
 
 ```{note}
-A fuller example of all the configuration options available can be found in Refinitiv's [official documentation](https://github.com/Refinitiv-API-Samples/Example.DataLibrary.Python/blob/main/Configuration/refinitiv-data.config.json).
+A fuller example of all the configuration options available can be found in the [official documentation](https://github.com/Refinitiv-API-Samples/Example.DataLibrary.Python/blob/main/Configuration/refinitiv-data.config.json).
 ```
 
 Unless you provide further instruction your Python script will expect the configuration file to be located in the same directory as the script you are running. Once the file is in place, you can import the library and open a session by running the following code:
 
 ```{code-cell}
-import refinitiv.data as rd
+import lseg.data as ld
 
-rd.open_session()
+ld.open_session()
 ```
 
 Verify the session is open by executing a query for the current price of Thomson Reuters stock. You should back a table of data.
 
 ```{code-cell}
-rd.get_history('TRI.N')
+ld.get_history('TRI.N')
 ```
 
 The library expects you to close your session when you're finished. You can do so by running the following code:
 
 ```{code-cell}
-rd.close_session()
+ld.close_session()
 ```
 
 ## Specifying a configuration file
@@ -65,5 +72,5 @@ If you want to store your configuration file in a different location, you can sp
 For example, if you gave your configuration file with a shorter name and stored it in a subdirectory named `config`, you could open a session by running something like the following:
 
 ```python
-rd.open_session(config_name="./config/refinitiv.json")
+ld.open_session(config_name="./config/lseg.json")
 ```
