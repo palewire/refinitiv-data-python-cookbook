@@ -3280,12 +3280,12 @@
         },
         "setuptools-scm": {
             "hashes": [
-                "sha256:2f5b21e45205e47ed3976e58bc29c38f49bb9b6f07c625c7fd2823871694b244",
-                "sha256:84c9b3f39ffb77ba00dd92a06e025e4f66dc69ab8df1c2a225a0678e76311f8d"
+                "sha256:1c674ab4665686a0887d7e24c03ab25f24201c213e82ea689d2f3e169ef7ef57",
+                "sha256:30e8f84d2ab1ba7cb0e653429b179395d0c33775d54807fc5f1dd6671801aef7"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.8'",
-            "version": "==9.2.1"
+            "version": "==9.2.2"
         },
         "snowballstemmer": {
             "hashes": [
