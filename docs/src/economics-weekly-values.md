@@ -23,7 +23,7 @@ import lseg.data as ld
 ld.open_session()
 ```
 
-You can use the [LSEG Data Library for Python](https://pypi.org/project/lseg-data/) to retrieve weekly economic indicators by passing the relevent [Refinitiv Instrument Code](https://en.wikipedia.org/wiki/Refinitiv_Identification_Code) to the `get_history` function with the `interval` parameter set to `"weekly"`.
+You can use the [LSEG Data Library for Python](https://pypi.org/project/lseg-data/) to retrieve weekly economic indicators by passing the relevant [Refinitiv Instrument Code](https://en.wikipedia.org/wiki/Refinitiv_Identification_Code) to the `get_history` function with the `interval` parameter set to `"weekly"`.
 
 Here's how to retrieve the number of new jobless claims in the US, a weekly indicator released by the US Department of Labor:
 
