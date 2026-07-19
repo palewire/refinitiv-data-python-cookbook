@@ -38,9 +38,6 @@ dev = [
     "flake8-docstrings",
     "flake8-simplify",
     "pep8-naming",
-    "pytest",
-    "pytest-env",
-    "pytest-cov",
     "black",
 ]
 
