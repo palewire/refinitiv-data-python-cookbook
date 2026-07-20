@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "refinitiv-data-python-cookbook"
+version = "1.0.0"
+description = "Practical examples for users of the LSEG Data Library for Python"
+readme = "README.md"
+requires-python = "==3.13.*"
+license = "MIT"
+dependencies = [
+    "jupyterlab",
+    "pandas",
+    "myst-nb",
+    "sphinx-multitoc-numbering",
+    "lseg-data",
+    "sphinx",
+    "sphinx-autobuild",
+    "myst-parser",
+    "sphinx-palewire-theme",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+]
+
+[dependency-groups]
+dev = [
+    "twine",
+    "setuptools-scm",
+    "pre-commit",
+    "mypy",
+    "types-requests",
+    "typing-extensions",
+    "flake8",
+    "flake8-bugbear",
+    "flake8-docstrings",
+    "flake8-simplify",
+    "pep8-naming",
+    "black",
+]
+
+[tool.setuptools]
+packages = []
