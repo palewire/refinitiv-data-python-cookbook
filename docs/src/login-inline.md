@@ -21,7 +21,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 
 You can authenticate with the [LSEG Data Library for Python](https://pypi.org/project/lseg-data/) directly inline using a function in the package’s `session` module.
 
-It requires that provide your application key, as well as the username and password you use to access the LSEG web portal. In this example, they will be stored in environment variables to avoid exposing private information in the source code.
+It requires that you provide your application key, as well as the username and password you use to access the LSEG web portal. In this example, they will be stored in environment variables to avoid exposing private information in the source code.
 
 ```{code-cell}
 import os
